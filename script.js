@@ -98,7 +98,18 @@ function handleCardClick(event) {
         localStorage.clear();
     }
 
+    if (document.querySelectorAll('div.flipped').length == 10)
+    {
+        setTimeout(function(){
+            alert('You won the game!!');
+            localStorage.clear();
+            window.location.reload(true);
+        }, 300)
+
+    }
+
 }
 
 // when the DOM loads
 createDivsForColors(shuffledColors);
+
